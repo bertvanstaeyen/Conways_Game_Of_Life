@@ -1,13 +1,13 @@
 import pygame
 import numpy as np
 
-
+# kleuren van programma definieren
 col_about_to_die = (200, 200, 225)
 col_alive = (255, 255, 215)
 col_background = (10, 10, 40)
 col_grid = (30, 30, 60)
 
-
+# add new generation of the pattern
 def update(surface, cur, sz):
     nxt = np.zeros((cur.shape[0], cur.shape[1]))
 
@@ -25,7 +25,7 @@ def update(surface, cur, sz):
 
     return nxt
 
-
+# array aanmaken voor startpatroon te definieren.
 def init(dimx, dimy):
     cells = np.zeros((dimy, dimx))
 
@@ -42,7 +42,7 @@ def init(dimx, dimy):
     cells[pos[0]:pos[0]+pattern.shape[0], pos[1]:pos[1]+pattern.shape[1]] = pattern
     return cells
 
-
+# programma window
 def main(dimx, dimy, cellsize):
     pygame.init()
     surface = pygame.display.set_mode((dimx * cellsize, dimy * cellsize))
@@ -60,6 +60,6 @@ def main(dimx, dimy, cellsize):
         cells = update(surface, cells, cellsize)
         pygame.display.update()
 
-
+# start programma
 if __name__ == "__main__":
     main(100, 70, 8)
