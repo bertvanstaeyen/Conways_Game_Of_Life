@@ -142,7 +142,7 @@ def main(WIN, WIDTH):
                 # run= False
 
                 # delay speed for new generation
-                pygame.time.delay(50)
+                pygame.time.delay(200)
             update_display(WIN, grid, ROWS, WIDTH)
 
 main(WIN, WIDTH)
