@@ -22,5 +22,5 @@ jobs:
         pyinstaller V3.py
     - uses: actions/upload-artifact@v2
       with:
-        name: name-of-artifact
+        name: Game0fLife
         path: D:\a\Conways_Game_Of_Life\Conways_Game_Of_Life\build\V3\V3.exe
